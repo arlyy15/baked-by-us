@@ -23,7 +23,19 @@ Here is how we can do Auth for our projects.
 * Copy the `.env.template` and name it `.env`
 * Create an `auth_example` database (or update your new `.env` to whatever database you are using)
 * Double check that the `.env` variables are all correct (username, password, database name)
-* `npm run kickstart` (`npm run dev` or `npm start` afterwards)
+* `npm run kickstart` (`npm run dev` or `npm start` afterwards). This will do the following commands all together:
+  * `npm i` - installs all dependencies
+  * `npm run migrate` - runs `knex migrate:latest` which will run the provided migration file (look in the `src/db/migrations` folder)
+  * `npm run seed` - runs `knex seed:run` which will run the provided seed file (look in `src/db/seeds` folder)
+  * `npm run start` - runs `node src/index.js`, starting your server. 
+  
+## Migrations & Seeds
+
+For an overview of migrations and seeds, [check out these notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-7/lesson-8-migrations-and-seeds/notes.md).
+
+The provided migration and seeds file will create a `users` table with `id`, `username`, and `password_hash` columns. If you need to update these columns, consider looking into the [alterTable](https://knexjs.org/guide/schema-builder.html#altertable) Knex documentation.
+
+For creating a new table, look at the [createTable](https://knexjs.org/guide/schema-builder.html#createtable) documentation.
 
 # Authentication vs Authorization
 Remember, `authenticated` means "We have confirmed this person is who they say they are" and `authorized` means "This person is who they say they are AND they are allowed to be here." So if we just want a user to be logged into the site to show content, we just check if they're `authenticated`. However, if they wanted to update their profile info, we'd need to make sure they were `authorized` to do that (e.g. the profile they're updating is their own).
