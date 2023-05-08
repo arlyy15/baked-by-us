@@ -1,4 +1,5 @@
 body {
+  background-color: #f6cada;
   font-family: sans-serif;
 }
 
@@ -21,4 +22,14 @@ nav ul li:first-child {
 #secret-container {
   text-align: center;
   border: black 1px dashed;
+}
+
+form {
+  display: grid;
+  display: inline-grid margin: 0 auto;
+}
+
+.form-body {
+  margin: 0 auto;
+  width: max-content;
 }

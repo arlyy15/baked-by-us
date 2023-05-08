@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,26 @@
   <script type="module" src="./scripts/create.js"></script>
   <title>Sign Up</title>
 </head>
+
 <body>
   <nav id="main-nav"></nav>
   <main>
-    <h1 id="sign-up">Sign Up Today!</h1>
-    <form id="create-form" aria-describedby="sign-up">
-      <label for="username">Username</label>
-      <input type="text" name="username" id="username" autocomplete="username">
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" autocomplete="password">
+    <div class="form-body">
+      <h1 id="sign-up">Sign Up Today!</h1>
+      <form id="create-form" aria-describedby="sign-up">
+        <label for="first">First Name</label>
+        <input type="text" name="first" id="first" autocomplete="First Name">
+        <label for="last">Last Name</label>
+        <input type="text" name="last" id="last" autocomplete="Last Name">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" autocomplete="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" autocomplete="password">
 
-      <button type="submit">Create User</button>
-    </form>
+        <button type="submit">Create User</button>
+      </form>
+    </div>
   </main>
 </body>
+
 </html>
