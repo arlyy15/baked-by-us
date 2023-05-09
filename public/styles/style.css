@@ -2,7 +2,11 @@ body {
   background-color: #f6cada;
   font-family: sans-serif;
 }
-
+main{
+  display: grid;
+    justify-content: center;
+    justify-items: center;
+}
 nav {
   height: 2rem;
 }
@@ -19,7 +23,7 @@ nav ul li:first-child {
   flex-grow: 1;
 }
 
-#secret-container {
+#container {
   text-align: center;
   border: black 1px dashed;
 }
@@ -32,4 +36,34 @@ form {
 .form-body {
   margin: 0 auto;
   width: max-content;
+}
+h1{
+  text-align: center;
+}
+img{
+  height:400px;
+  width: 853px;
+}
+p{
+  width: 600px;
+padding-left: 150px;
+}
+#rename{
+padding-left: 462px;
+}
+#username-form{
+  width: max-content;
+}
+#logout-form{
+  width: fit-content;
+}
+#bakedGoods-form{
+  margin: 0 auto;
+    width: max-content;
+    padding-bottom: 30px;
+    border-style: solid;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: aliceblue;
 }

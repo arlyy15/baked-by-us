@@ -1,13 +1,13 @@
 const create = async (req, res) => {
     const {
         session,
-        db: { bakedGoods },
-        body: { id, caption, url, price },
+        db: { BakedGoods },
+        body: { caption, url, price, user_Id },
     } = req;
 
     console.log(req.body)
-    const bakeditems = await bakedGoods.create(id, caption, url, price, session.userId);
-    console.log(bakedGoods)
+    const bakeditems = await BakedGoods.create(caption, url, price, session.userId);
+    console.log(bakeditems)
 
     res.send(bakeditems);
 };

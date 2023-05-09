@@ -1,20 +1,21 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
-  <script type="module" src="./scripts/create.js"></script>
-  <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bg-styles/style.css">
+    <title>shopping-cart</title>
 </head>
-
 <body>
-  <nav id="main-nav"></nav>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="./shop.html">Shop</a></li>
+      </ul>
+    </nav>
   <main >
     <div class="form-body">
-      <h1 id="sign-up">Sign Up Today!</h1>
+      <h1 id="shopping-cart">Ready To Checkout?!</h1>
       <form id="create-form" aria-describedby="sign-up">
         <label for="first">First Name</label>
         <input type="text" name="first" id="first" autocomplete="First Name">
@@ -25,10 +26,9 @@
         <label for="password">Password</label>
         <input type="password" name="password" id="password" autocomplete="password">
 
-        <button type="submit">Create User</button>
+        <button type="submit">Checkout</button>
       </form>
     </div>
   </main>
 </body>
-
 </html>

@@ -31,10 +31,6 @@ Router.get('/bakedGoods/:id', bakedGoodsController.show);
 Router.get('/other', otherController.list);
 Router.get('/other/:id', otherController.show);
 
-// checkAuthentication middleware is applied to only to this route (and /logged-in-secret)
-Router.get('/logged-in-secret', checkAuthentication, (req, res) => {
-  res.send({ msg: 'The secret is: there is no secret.' });
-});
 
 // Update
 Router.patch('/users/:id', checkAuthentication, userController.update);

@@ -14,3 +14,8 @@ exports.seed = async (knex) => {
   await User.create('cool_cat', 'password1', 'Arly', 'Raymundo');
   await User.create('l33t-guy', 'password1', 'Ben', 'Spector');
 }; ``
+const Other = require('../models/other')
+exports.seed = async (knex) => {
+  await Other.deleteAll();
+  await Other.create('1', 'smells and tastes amazing!', 'Ten!', '2');
+};

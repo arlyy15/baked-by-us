@@ -13,11 +13,18 @@
   <main>
     <h1 id="username"></h1>
 
-    <p id="rename">Update Username</p>
-    <form id="username-form" aria-labelledby="rename">
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username-input">
-      <button type="submit">Update Username</button>
+    <p id="rename">Sell Baked Goods</p>
+    <form id="bakedGoods-form" aria-labelledby="create-bg-item">
+      <label for="create-bg">Create Baked Good:</label>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" autocomplete="username">
+      <label for="caption">Description</label>
+      <input type="text" name="Description" id="Description" autocomplete="description">
+      <label for="price">Price</label>
+      <input type="text" name="price" id="price" autocomplete="price">
+      
+      <label for="password">Password</label>
+      <button type="submit">Add Baked Good</button>
     </form>
 
     <hr>

@@ -63,11 +63,14 @@ const setNav = (hasLoggedInUser) => {
     <li><a href="/">Home</a></li>
     <li><a href="./create.html">Sign Up</a></li>
     <li><a href="./login.html">Login</a></li>
+    <li><a href="./shop.html">Shopping Cart</a></li>
   </ul>`;
 
   const loggedInNavHtml = `<ul>
     <li><a href="/">Home</a></li>
     <li><a href="./user.html">Profile</a></li>
+    <li><a href="./cart.html">Cart</a></li>
+    <li><a href="./shop.html">Shop</a></li>
   </ul>`;
 
   const navHtml = hasLoggedInUser ? loggedInNavHtml : loggedOutNavHtml;

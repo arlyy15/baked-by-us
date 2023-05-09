@@ -9,11 +9,11 @@ class bakedGoods{
         this.user_id;
         
       }
-      static async create(id,caption, url, price,user_id) {
+      static async create(caption, url, price,user_id) {
         try {
-          const query = `INSERT INTO bakedGoods (id,caption, url, price, user_id)
-            VALUES (?, ?, ?, ?, ?) RETURNING *`;
-          const { rows: [bakedItems] } = await knex.raw(query, [id,caption, url, price, user_id]);
+          const query = `INSERT INTO bakedGoods (caption, url, price, user_id)
+            VALUES ( ?, ?, ?, ?) RETURNING *`;
+          const { rows: [bakedItems] } = await knex.raw(query, [caption, url, price, user_id]);
           return new bakedGoods(bakedItems);
         } catch (err) {
           console.error(err);

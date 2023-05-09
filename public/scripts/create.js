@@ -10,10 +10,10 @@ const main = async () => {
   if (user) return window.location.assign('/user.html');
 
   setNav();
-  document.querySelector('#create-form')
+  document.querySelector('#bakedGoods-form')
     .addEventListener('submit', async (event) => {
       event.preventDefault();
-      signupAndLoginHandler('/api/users', event.target);
+      signupAndLoginHandler('/api/bakedGoods', event.target);
     });
 };
 
